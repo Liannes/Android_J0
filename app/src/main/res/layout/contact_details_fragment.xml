@@ -1,67 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ContactDetailsFragment">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/list_image"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="@dimen/contact_details_avatar_size"
+            android:layout_height="@dimen/contact_details_avatar_size"
             android:src="@mipmap/ic_avatar"
-            tools:ignore="ImageContrastCheck"></ImageView>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
         <TextView
             android:id="@+id/list_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/contact_details_name_Top"
             android:layout_toEndOf="@+id/list_image"
             android:text="@string/example_name"
             android:textColor="@color/black"
-            android:textSize="24sp">
-        </TextView>
+            android:textSize="@dimen/contact_details_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/list_image"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
         <TextView
             android:id="@+id/exp_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/list_image"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="@dimen/contact_details_Start"
+            android:layout_marginTop="@dimen/contact_details_name_Top"
             android:text="@string/num"
             android:textColor="@color/black"
-            android:textSize="20sp">
-        </TextView>
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_image"></TextView>
 
         <TextView
             android:id="@+id/two_exp_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/exp_num"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="@dimen/contact_details_Start"
+            android:layout_marginTop="@dimen/contact_details_Top"
             android:text="@string/two_num"
             android:textColor="@color/black"
-            android:textSize="20sp"></TextView>
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_num"></TextView>
 
         <TextView
             android:id="@+id/mobile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/list_image"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="@dimen/contact_details_Start"
+            android:layout_marginTop="150dp"
             android:layout_toEndOf="@+id/exp_num"
             android:text="@string/example_mobile"
             android:textColor="@color/black"
-            android:textSize="20sp"></TextView>
+            android:textStyle="italic"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/exp_num"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <TextView
             android:id="@+id/exp_mail"
@@ -69,58 +80,66 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/two_exp_num"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="@string/email"
             android:textColor="@color/black"
-            android:textSize="20sp">
-        </TextView>
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/two_exp_num"></TextView>
 
         <TextView
             android:id="@+id/list_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/two_exp_num"
+            android:layout_marginStart="@dimen/contact_details_Start"
+            android:layout_marginTop="60dp"
             android:layout_toRightOf="@+id/exp_mail"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
             android:text="@string/example_email"
             android:textColor="@color/black"
-            android:textSize="20sp">
-        </TextView>
+            android:textStyle="italic"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@+id/exp_mail"
+            app:layout_constraintTop_toBottomOf="@+id/mobile"></TextView>
 
         <TextView
             android:id="@+id/two_exp_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/exp_mail"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="@dimen/contact_details_Start"
+            android:layout_marginTop="@dimen/contact_details_Top"
             android:text="@string/two_email"
             android:textColor="@color/black"
-            android:textSize="20sp">
-        </TextView>
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exp_mail"></TextView>
 
         <TextView
             android:id="@+id/note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
             android:layout_below="@+id/two_exp_email"
+            android:layout_marginStart="@dimen/contact_details_Start"
+            android:layout_marginTop="@dimen/contact_details_Top"
             android:text="@string/Note"
             android:textColor="@color/black"
-            android:textSize="20sp">
-        </TextView>
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/two_exp_email"></TextView>
+
         <TextView
             android:id="@+id/exp_note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/note"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/contact_details_Start"
+            android:layout_marginTop="@dimen/contact_details_Top"
             android:text="@string/example_note"
             android:textColor="@color/black"
-            android:textSize="20sp">
-        </TextView>
-    </RelativeLayout>
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/note"></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

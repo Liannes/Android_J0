@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="contact_list_avatar_size">80dp</dimen>
+    <dimen name="contact_list_size">25sp</dimen>
+    <dimen name="contact_list_mobile">15sp</dimen>
+    <dimen name="contact_list_Start">20dp</dimen>
+    <dimen name="contact_list_Top">10dp</dimen>
+    <dimen name="contact_details_Start">10dp</dimen>
+    <dimen name="contact_details_Top">15dp</dimen>
+    <dimen name="contact_details_avatar_size">120dp</dimen>
+    <dimen name="contact_details_name">30sp</dimen>
+    <dimen name="contact_details_name_Top">30sp</dimen>
+</resources>

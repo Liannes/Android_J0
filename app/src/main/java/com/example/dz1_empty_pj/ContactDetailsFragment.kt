@@ -5,22 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.TextView
+import androidx.core.os.bundleOf
 
 
 class ContactDetailsFragment : Fragment() {
-
     companion object{
-        fun inst(): ContactDetailsFragment {
+        fun newInstance(contactID: String? = null): ContactDetailsFragment {
             val args = Bundle()
+            contactID?.let {
+                args.putString(Constant.contactID, it)
+            }
             val fragment = ContactDetailsFragment()
             fragment.arguments = args
             return fragment
         }
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +30,8 @@ class ContactDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        requireActivity().setTitle(R.string.contact_details)
+        val toolbar: androidx.appcompat.widget.Toolbar = view.findViewById(R.id.toolbar)
+        toolbar.title = getString(R.string.contact_details)
     }
 
 }

@@ -7,11 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <FrameLayout
+    <androidx.fragment.app.FragmentContainerView
         class = "com.example.dz1_empty_pj.ContactListFragment"
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </FrameLayout>
+    </androidx.fragment.app.FragmentContainerView>
 </FrameLayout>
