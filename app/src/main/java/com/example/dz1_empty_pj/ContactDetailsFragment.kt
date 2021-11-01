@@ -12,9 +12,9 @@ import androidx.core.os.bundleOf
 class ContactDetailsFragment : Fragment() {
     companion object {
         private const val CONTACT_ID = "contact_id"
-        fun newInstance(contactID: String? = null): ContactDetailsFragment {
+        fun newInstance(CONTACT_ID: String? = null): ContactDetailsFragment {
             val args = Bundle()
-            contactID?.let {
+            CONTACT_ID?.let {
                 args.putString(CONTACT_ID, it)
             }
             val fragment = ContactDetailsFragment()
