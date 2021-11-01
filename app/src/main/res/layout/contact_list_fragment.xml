@@ -7,22 +7,22 @@
     android:background="@color/snow"
     tools:context=".ContactListFragment">
 
-    <androidx.appcompat.widget.Toolbar
+    <Toolbar
         android:id="@+id/toolbar"
         style="@style/defaultToolbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="@dimen/intendToolbarMarginVertical" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/intendToolbarMarginVertical"
         app:cardCornerRadius="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/cardViewHeight"
             android:background="@color/white">
 
             <ImageView

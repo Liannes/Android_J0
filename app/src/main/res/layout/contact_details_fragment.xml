@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ContactDetailsFragment">
 
-    <androidx.appcompat.widget.Toolbar
+    <Toolbar
         android:id="@+id/toolbar"
         style="@style/defaultToolbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="@dimen/intendToolbarMarginVertical" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/intendToolbarMarginVertical"
         android:background="@color/snow">
 
         <ImageView

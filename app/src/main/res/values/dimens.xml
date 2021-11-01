@@ -21,4 +21,7 @@
     <dimen name="smallRangeHorizontalMargin">10dp</dimen>
     <dimen name="defaultRangeHorizontalMargin">20dp</dimen>
     <dimen name="largeRangeHorizontalMargin">30dp</dimen>
+    
+    <dimen name="intendToolbarMarginVertical">50dp</dimen>
+    <dimen name="cardViewHeight">100dp</dimen>
 </resources>

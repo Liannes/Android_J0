@@ -5,16 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toolbar
 import androidx.core.os.bundleOf
 
 
 class ContactDetailsFragment : Fragment() {
     companion object {
+        private const val CONTACT_ID = "contact_id"
         fun newInstance(contactID: String? = null): ContactDetailsFragment {
-            val contactId = "CONTACT_ID"
             val args = Bundle()
             contactID?.let {
-                args.putString(contactId, it)
+                args.putString(CONTACT_ID, it)
             }
             val fragment = ContactDetailsFragment()
             fragment.arguments = args
@@ -31,7 +32,7 @@ class ContactDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val toolbar: androidx.appcompat.widget.Toolbar = view.findViewById(R.id.toolbar)
+        val toolbar: Toolbar = view.findViewById(R.id.toolbar)
         toolbar.title = getString(R.string.contactDetails)
     }
 }
