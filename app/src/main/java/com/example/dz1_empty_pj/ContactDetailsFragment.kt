@@ -9,11 +9,12 @@ import androidx.core.os.bundleOf
 
 
 class ContactDetailsFragment : Fragment() {
-    companion object{
+    companion object {
         fun newInstance(contactID: String? = null): ContactDetailsFragment {
+            val contactId = "CONTACT_ID"
             val args = Bundle()
             contactID?.let {
-                args.putString(Constant.contactID, it)
+                args.putString(contactId, it)
             }
             val fragment = ContactDetailsFragment()
             fragment.arguments = args
@@ -31,7 +32,6 @@ class ContactDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val toolbar: androidx.appcompat.widget.Toolbar = view.findViewById(R.id.toolbar)
-        toolbar.title = getString(R.string.contact_details)
+        toolbar.title = getString(R.string.contactDetails)
     }
-
 }

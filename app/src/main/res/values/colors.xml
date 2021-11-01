@@ -5,10 +5,9 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#00796B</color>
-    <color name="Snow">#FFFAFA</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="LightSalmon">#FFA07A</color>
-    <color name="Green">#7c9d5d</color>
-    <color name="Gainsboro">#DCDCDC</color>
+
+    <color name="green">#7c9d5d</color>
+    <color name="snow">#FFFAFA</color>
 </resources>

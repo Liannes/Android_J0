@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/Snow"
+    android:background="@color/snow"
     tools:context=".ContactListFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        style="@style/defaultToolbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/Green"
-        app:titleTextColor="@color/black"></androidx.appcompat.widget.Toolbar>
+        android:layout_height="50dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,40 +26,49 @@
             android:background="@color/white">
 
             <ImageView
-                android:id="@+id/list_image"
-                android:layout_width="@dimen/contact_list_avatar_size"
-                android:layout_height="@dimen/contact_list_avatar_size"
+                android:id="@+id/listImage"
+                android:layout_width="@dimen/defaultAvatarSize"
+                android:layout_height="@dimen/defaultAvatarSize"
                 android:src="@mipmap/ic_avatar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></ImageView>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/list_name"
+                android:id="@+id/listName"
+                style="@style/allocationText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="@dimen/contact_list_Start"
-                android:layout_marginTop="@dimen/contact_list_Top"
-                android:layout_toEndOf="@+id/list_image"
-                android:text="@string/example_name"
-                android:textColor="@color/black"
-                android:textSize="@dimen/contact_list_size"
-                app:layout_constraintStart_toEndOf="@+id/list_image"
-                app:layout_constraintTop_toTopOf="parent"></TextView>
+                android:layout_marginStart="@dimen/smallHorizontalMargin"
+                android:layout_marginTop="@dimen/smallVerticalMargin"
+                android:layout_toEndOf="@+id/listImage"
+                android:text="@string/exampleTextName"
+                app:layout_constraintStart_toEndOf="@+id/listImage"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/list_mobile"
+                android:id="@+id/listLastName"
+                style="@style/allocationText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/contact_list_Start"
-                android:layout_marginTop="@dimen/contact_list_Top"
-                android:layout_toEndOf="@+id/list_image"
-                android:text="@string/example_mobile"
-                android:textColor="@color/black"
-                android:textSize="@dimen/contact_list_mobile"
-                app:layout_constraintStart_toEndOf="@+id/list_image"
-                app:layout_constraintTop_toBottomOf="@+id/list_name"></TextView>
+                android:layout_marginStart="@dimen/smallRangeVerticalMargin"
+                android:layout_marginTop="@dimen/smallVerticalMargin"
+                android:text="@string/exampleTextLastName"
+                app:layout_constraintStart_toEndOf="@+id/listName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/listMobile"
+                style="@style/defaultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/smallHorizontalMargin"
+                android:layout_marginTop="@dimen/smallRangeVerticalMargin"
+                android:layout_toEndOf="@+id/listImage"
+                android:text="@string/exampleTextMobile"
+                app:layout_constraintStart_toEndOf="@+id/listImage"
+                app:layout_constraintTop_toBottomOf="@+id/listName" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </FrameLayout>

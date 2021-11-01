@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity(), ContactInterface {
         transaction.commit()
     }
 
-    override fun navigationToContactDetailsFragment(contactID: String){
+    override fun navigationToContactDetailsFragment(contactId: String){
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.main_fragment, ContactDetailsFragment.newInstance(contactID))
+        transaction.replace(R.id.main_fragment, ContactDetailsFragment.newInstance(contactId))
         transaction.addToBackStack("DetailContact")
         transaction.commit()
     }

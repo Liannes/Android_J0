@@ -1,5 +1,6 @@
 package com.example.dz1_empty_pj
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,12 +12,14 @@ class ContactListFragment : Fragment() {
 
     private var contactInterface: ContactInterface? = null
 
-    companion object{
-        fun newInstance(): ContactListFragment {
-            val args = Bundle()
-            val fragment = ContactListFragment()
-            fragment.arguments = args
-            return fragment
+    companion object {
+        fun newInstance() = Fragment()
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is ContactInterface) {
+            contactInterface= context
         }
     }
 
@@ -32,9 +35,9 @@ class ContactListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val toolbar: androidx.appcompat.widget.Toolbar = view.findViewById(R.id.toolbar)
         val cardView: CardView = view.findViewById(R.id.cardView)
-        toolbar.title = getString(R.string.contact_list)
+        toolbar.title = getString(R.string.contactList)
         cardView.setOnClickListener {
-           contactInterface?.navigationToContactDetailsFragment("1")
+            contactInterface?.navigationToContactDetailsFragment("1")
         }
     }
 }
