@@ -14,16 +14,16 @@ class MainActivity : AppCompatActivity(), ContactInterface {
         }
     }
 
-    private fun navigationToContactListFragment(){
+    private fun navigationToContactListFragment() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.main_fragment, ContactListFragment.newInstance())
         transaction.addToBackStack(null)
         transaction.commit()
     }
 
-    override fun navigationToContactDetailsFragment(CONTACT_ID: String){
+    override fun navigationToContactDetailsFragment(contactId: String) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.main_fragment, ContactDetailsFragment.newInstance(CONTACT_ID))
+        transaction.replace(R.id.main_fragment, ContactDetailsFragment.newInstance(contactId))
         transaction.addToBackStack("DetailContact")
         transaction.commit()
     }

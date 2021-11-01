@@ -20,7 +20,7 @@ class ContactListFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is ContactInterface) {
-            contactInterface= context
+            contactInterface = context
         }
     }
 
