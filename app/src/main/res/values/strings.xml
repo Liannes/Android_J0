@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">DZ1_Empty_pj</string>
+    <string name="textNum">Номер: </string>
+    <string name="textNumTwo">Номер 2: </string>
+    <string name="textEmail">Почта: </string>
+    <string name="textEmailTwo">Почта 2: </string>
+    <string name="textNote">Примечание: </string>
+
+    <string name="exampleTextNote">Особа опасна во сне!</string>
+    <string name="exampleTextName">Арвен</string>
+    <string name="exampleTextLastName">Ундфмфэль</string>
+    <string name="exampleTextEmail">joker112@bk.ru</string>
+    <string name="exampleTextEmailTwo">аfros33@gmail.com</string>
+    <string name="exampleTextMobile">+7(987)856-13-54</string>
+    <string name="exampleTextMobileTwo">+7(313)412-41-41 </string>
+
+    <string name="contactList">Список контактов </string>
+    <string name="contactDetails">Детали контакта </string>
+
 </resources>
