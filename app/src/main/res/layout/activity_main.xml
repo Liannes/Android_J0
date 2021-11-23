@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        class = "com.example.dz1_empty_pj.ContactListFragment"
+        class = "com.example.dz1_empty_pj.fragment.ContactListFragment"
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
