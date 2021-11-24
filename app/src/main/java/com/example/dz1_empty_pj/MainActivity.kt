@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), ContactInterface
         }
     }
 
+    override fun getStatusBound(): Boolean = contactBound
+
     override fun getService(): ServerContact? = serverContact
 
     override fun onCreate(savedInstanceState: Bundle?) {

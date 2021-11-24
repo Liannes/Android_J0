@@ -50,9 +50,10 @@ class ContactListFragment : Fragment(R.layout.contact_list_fragment) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         viewLifecycleOwner.lifecycleScope.launch {
             data = withContext(Dispatchers.IO) {
+                while (!(getContactService?.getStatusBound() as Boolean)){}
                 getContactService?.getService()?.getContactList()
             }
             getViewBinding()

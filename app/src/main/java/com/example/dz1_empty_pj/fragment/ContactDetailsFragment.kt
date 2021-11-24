@@ -2,12 +2,10 @@ package com.example.dz1_empty_pj.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.lifecycle.lifecycleScope
 import com.example.dz1_empty_pj.ContactInterface
@@ -61,9 +59,10 @@ class ContactDetailsFragment : Fragment(R.layout.contact_details_fragment) {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         viewLifecycleOwner.lifecycleScope.launch {
             data = withContext(Dispatchers.IO) {
+                while (!(getContactService?.getStatusBound() as Boolean)){}
                 getContactService?.getService()?.getContactDetails(arguments?.getString(CONTACT_ID).toString())
             }
             getViewBinding()
