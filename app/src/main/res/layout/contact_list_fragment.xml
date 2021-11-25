@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/snow"
-    tools:context=".ContactListFragment">
+    tools:context=".fragment.ContactListFragment">
 
     <Toolbar
         android:id="@+id/toolbar"
@@ -44,17 +44,6 @@
                 android:layout_toEndOf="@+id/listImage"
                 android:text="@string/exampleTextName"
                 app:layout_constraintStart_toEndOf="@+id/listImage"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/listLastName"
-                style="@style/allocationText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/smallRangeVerticalMargin"
-                android:layout_marginTop="@dimen/smallVerticalMargin"
-                android:text="@string/exampleTextLastName"
-                app:layout_constraintStart_toEndOf="@+id/listName"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactDetailsFragment">
+    tools:context=".fragment.ContactDetailsFragment">
 
     <Toolbar
         android:id="@+id/toolbar"
@@ -20,7 +20,7 @@
         android:background="@color/snow">
 
         <ImageView
-            android:id="@+id/listImage"
+            android:id="@+id/detailsImage"
             android:layout_width="@dimen/largeAvatarSize"
             android:layout_height="@dimen/largeAvatarSize"
             android:src="@mipmap/ic_avatar"
@@ -28,26 +28,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/listName"
+            android:id="@+id/detailsName"
             style="@style/allocationText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/smallHorizontalMargin"
             android:layout_marginTop="@dimen/defaultVerticalMargin"
-            android:layout_toEndOf="@+id/listImage"
+            android:layout_toEndOf="@+id/detailsImage"
             android:text="@string/exampleTextName"
-            app:layout_constraintStart_toEndOf="@+id/listImage"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/listLastName"
-            style="@style/allocationText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/smallRangeVerticalMargin"
-            android:layout_marginTop="@dimen/defaultVerticalMargin"
-            android:text="@string/exampleTextLastName"
-            app:layout_constraintStart_toEndOf="@+id/listName"
+            app:layout_constraintStart_toEndOf="@+id/detailsImage"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -55,12 +44,12 @@
             style="@style/largeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/listImage"
+            android:layout_below="@+id/detailsImage"
             android:layout_marginStart="@dimen/verySmallHorizontalMargin"
             android:layout_marginTop="@dimen/defaultVerticalMargin"
             android:text="@string/textNum"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listImage" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsImage" />
 
         <TextView
             android:id="@+id/textNumTwo"
@@ -107,7 +96,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textEmailTwo" />
 
         <TextView
-            android:id="@+id/exampleNum"
+            android:id="@+id/detailsNum"
             style="@style/largeTextItalic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -115,10 +104,10 @@
             android:layout_marginTop="@dimen/defaultVerticalMargin"
             android:text="@string/exampleTextMobile"
             app:layout_constraintStart_toEndOf="@+id/textNum"
-            app:layout_constraintTop_toBottomOf="@+id/listImage" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsImage" />
 
         <TextView
-            android:id="@+id/exampleNumTwo"
+            android:id="@+id/detailsNumTwo"
             style="@style/largeTextItalic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -126,10 +115,10 @@
             android:layout_marginTop="@dimen/verySmallVerticalMargin"
             android:text="@string/exampleTextMobileTwo"
             app:layout_constraintStart_toEndOf="@+id/textNumTwo"
-            app:layout_constraintTop_toBottomOf="@+id/exampleNum" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsNum" />
 
         <TextView
-            android:id="@+id/exampleEmail"
+            android:id="@+id/detailsEmail"
             style="@style/largeTextItalic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,10 +126,10 @@
             android:layout_marginTop="@dimen/defaultVerticalMargin"
             android:text="@string/exampleTextEmail"
             app:layout_constraintStart_toEndOf="@+id/textEmail"
-            app:layout_constraintTop_toBottomOf="@+id/exampleNumTwo" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsNumTwo" />
 
         <TextView
-            android:id="@+id/exampleEmailTwo"
+            android:id="@+id/detailsEmailTwo"
             style="@style/largeTextItalic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -148,10 +137,10 @@
             android:layout_marginTop="@dimen/verySmallVerticalMargin"
             android:text="@string/exampleTextEmailTwo"
             app:layout_constraintStart_toEndOf="@+id/textEmailTwo"
-            app:layout_constraintTop_toBottomOf="@+id/exampleEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsEmail" />
 
         <TextView
-            android:id="@+id/exampleNote"
+            android:id="@+id/detailsNote"
             style="@style/largeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -159,7 +148,7 @@
             android:layout_marginTop="@dimen/defaultVerticalMargin"
             android:text="@string/exampleTextNote"
             app:layout_constraintStart_toEndOf="@+id/textNote"
-            app:layout_constraintTop_toBottomOf="@+id/exampleEmailTwo" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsEmailTwo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
