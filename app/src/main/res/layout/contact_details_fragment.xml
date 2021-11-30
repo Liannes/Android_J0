@@ -95,6 +95,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textEmailTwo" />
 
+
+        <TextView
+            android:id="@+id/textBirthDay"
+            style="@style/largeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/verySmallHorizontalMargin"
+            android:layout_marginStart="@dimen/verySmallHorizontalMargin"
+            android:text="@string/textBirthDay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNote" />
+
         <TextView
             android:id="@+id/detailsNum"
             style="@style/largeTextItalic"
@@ -141,7 +153,7 @@
 
         <TextView
             android:id="@+id/detailsNote"
-            style="@style/largeText"
+            style="@style/largeTextItalic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/verySmallHorizontalMargin"
@@ -149,6 +161,30 @@
             android:text="@string/exampleTextNote"
             app:layout_constraintStart_toEndOf="@+id/textNote"
             app:layout_constraintTop_toBottomOf="@+id/detailsEmailTwo" />
+
+        <TextView
+            android:id="@+id/detailsBirthDay"
+            style="@style/largeTextItalic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/verySmallHorizontalMargin"
+            android:layout_marginTop="@dimen/verySmallVerticalMargin"
+            android:text="@string/exampleTextBirthDay"
+            app:layout_constraintStart_toEndOf="@+id/textBirthDay"
+            app:layout_constraintTop_toBottomOf="@+id/detailsNote" />
+
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            style="@style/largeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/verySmallVerticalMargin"
+            android:layout_marginTop="@dimen/smallHorizontalMargin"
+            android:textOff="@string/exampleTextToggleButtonOff"
+            android:textOn="@string/exampleTextToggleButtonOn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textBirthDay" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

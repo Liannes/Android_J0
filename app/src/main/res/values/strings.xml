@@ -5,6 +5,7 @@
     <string name="textEmail">Почта: </string>
     <string name="textEmailTwo">Почта 2: </string>
     <string name="textNote">Примечание: </string>
+    <string name="textBirthDay">День рождения: </string>
 
     <string name="exampleTextNote">Особа опасна во сне!</string>
     <string name="exampleTextName">Арвен Ундфмфэль</string>
@@ -12,8 +13,14 @@
     <string name="exampleTextEmailTwo">аfros33@gmail.com</string>
     <string name="exampleTextMobile">+7(987)856-13-54</string>
     <string name="exampleTextMobileTwo">+7(313)412-41-41 </string>
+    <string name="exampleTextToggleButtonOn">Выключить напоминание</string>
+    <string name="exampleTextToggleButtonOff">Включить напоминание</string>
+    <string name="exampleTextBirthDay">хх.хх.хххх</string>
 
-    <string name="contactList">Список контактов </string>
-    <string name="contactDetails">Детали контакта </string>
+    <string name="contactList">Список контактов</string>
+    <string name="contactDetails">Детали контакта</string>
+
+    <string name="title_notification">Напоминание о дне рождения</string>
+    <string name="text_notification">Сегодня день рождения</string>
 
 </resources>

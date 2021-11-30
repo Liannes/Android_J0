@@ -6,6 +6,7 @@ import android.content.ServiceConnection
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
+import android.util.Log
 import com.example.dz1_empty_pj.databinding.ActivityMainBinding
 import com.example.dz1_empty_pj.fragment.ContactDetailsFragment
 import com.example.dz1_empty_pj.fragment.ContactListFragment
@@ -18,16 +19,25 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), ContactInterface
     private var serverContact: ServerContact? = null
     private var contactBound: Boolean = false
     private var savedFirstFragment: Boolean? = null
+    private var tag: String = "SERVICE"
 
     private val serviceConnected = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
             val binder = service as ServerContact.ContactServiceBinder
             serverContact = binder.getService()
             contactBound = true
+
+            val details: String = intent.getStringExtra("contactDetails").toString()
+            val contactId: String = intent.getStringExtra("contactId").toString()
+
             if (savedFirstFragment == true) navigationToContactListFragment()
+            if (details != null) navigationToContactDetailsFragment(contactId)
+
+            Log.i(tag,"Connect")
         }
 
         override fun onServiceDisconnected(name: ComponentName?) {
+            Log.i(tag,"Disconnect")
             contactBound = false
         }
     }

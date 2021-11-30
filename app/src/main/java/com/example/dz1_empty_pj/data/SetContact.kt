@@ -1,8 +1,10 @@
 package com.example.dz1_empty_pj.data
 
 import com.example.dz1_empty_pj.R
+import java.util.*
 
 object SetContact {
+    const val broadCast = "com.example.dz1_empty_pj"
     val setContact = listOf(
         Contact(
             contactId = "1",
@@ -12,7 +14,8 @@ object SetContact {
             firstEmail = "gahkc@gm.com",
             secondEmail = "htfk@ya.es",
             description = "Много пьет, много знает",
-            avatarUri = R.drawable.ic_git_cat
+            avatarUri = R.drawable.ic_git_cat,
+            birthDay = GregorianCalendar(1894, Calendar.NOVEMBER,30)
         )
     )
 }
