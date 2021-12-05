@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
+import com.example.dz1_empty_pj.BirthdayReceiver.Companion.CONTACT_ID
 import com.example.dz1_empty_pj.databinding.ActivityMainBinding
 import com.example.dz1_empty_pj.fragment.ContactDetailsFragment
 import com.example.dz1_empty_pj.fragment.ContactListFragment
+import com.example.dz1_empty_pj.service.ContactInterface
 import com.example.dz1_empty_pj.service.GetService
 import com.example.dz1_empty_pj.service.ServerContact
 
@@ -24,20 +26,21 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), ContactInterface
     private val serviceConnected = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
             val binder = service as ServerContact.ContactServiceBinder
+            Log.i(tag, "Connect")
             serverContact = binder.getService()
             contactBound = true
 
-            val details: String = intent.getStringExtra("contactDetails").toString()
-            val contactId: String = intent.getStringExtra("contactId").toString()
+            val fragment = intent.getStringExtra(BirthdayReceiver.FRAGMENT_LAYOUT)
+            val contactId = intent.getStringExtra(CONTACT_ID)
+            Log.d(tag, "fragment = $fragment + contactId = $contactId")
+
+            if (fragment !== null) contactId?.let { navigationToContactDetailsFragment(it) }
 
             if (savedFirstFragment == true) navigationToContactListFragment()
-            if (details != null) navigationToContactDetailsFragment(contactId)
-
-            Log.i(tag,"Connect")
         }
 
         override fun onServiceDisconnected(name: ComponentName?) {
-            Log.i(tag,"Disconnect")
+            Log.i(tag, "Disconnect")
             contactBound = false
         }
     }

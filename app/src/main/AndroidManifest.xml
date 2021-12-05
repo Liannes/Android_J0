@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DZ1_Empty_pj">
-
         <receiver
-            android:name=".broadreciver.BroadReceiver"
+            android:name=".BirthdayReceiver"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.dz1_empty_pj"/>
+            </intent-filter>
+        </receiver>
 
         <service
             android:name=".service.ServerContact"
@@ -23,11 +26,12 @@
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

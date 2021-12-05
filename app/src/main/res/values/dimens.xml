@@ -4,24 +4,25 @@
     <dimen name="defaultAvatarSize">80dp</dimen>
     <dimen name="largeAvatarSize">120dp</dimen>
 
+    <dimen name="superSmallHorizontalMargin">12dp</dimen>
     <dimen name="verySmallHorizontalMargin">16dp</dimen>
     <dimen name="smallHorizontalMargin">30dp</dimen>
     <dimen name="defaultHorizontalMargin">40dp</dimen>
     <dimen name="largeHorizontalMargin">60dp</dimen>
 
+    <dimen name="smallHorizontalMarginSwitch">14dp</dimen>
+    <dimen name="defaultHorizontalMarginSwitch">16dp</dimen>
+    <dimen name="largeHorizontalMarginSwitch">18dp</dimen>
+
     <dimen name="verySmallVerticalMargin">16dp</dimen>
     <dimen name="smallVerticalMargin">20dp</dimen>
     <dimen name="defaultVerticalMargin">30dp</dimen>
     <dimen name="largeVerticalMargin">60dp</dimen>
-    
-    <dimen name="smallRangeVerticalMargin">10dp</dimen>
-    <dimen name="defaultRangeVerticalMargin">20dp</dimen>
-    <dimen name="largeRangeVerticalMargin">30dp</dimen>
 
-    <dimen name="smallRangeHorizontalMargin">10dp</dimen>
-    <dimen name="defaultRangeHorizontalMargin">20dp</dimen>
-    <dimen name="largeRangeHorizontalMargin">30dp</dimen>
-    
+    <dimen name="smallVerticalMarginSwitch">12dp</dimen>
+    <dimen name="defaultVerticalMarginSwitch">14dp</dimen>
+    <dimen name="largeVerticalMarginSwitch">16dp</dimen>
+
     <dimen name="intendToolbarMarginVertical">50dp</dimen>
     <dimen name="cardViewHeight">100dp</dimen>
 </resources>

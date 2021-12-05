@@ -4,7 +4,6 @@ import com.example.dz1_empty_pj.R
 import java.util.*
 
 object SetContact {
-    const val broadCast = "com.example.dz1_empty_pj"
     val setContact = listOf(
         Contact(
             contactId = "1",
@@ -15,7 +14,7 @@ object SetContact {
             secondEmail = "htfk@ya.es",
             description = "Много пьет, много знает",
             avatarUri = R.drawable.ic_git_cat,
-            birthDay = GregorianCalendar(1894, Calendar.NOVEMBER,30)
+            birthDay = GregorianCalendar(2021, Calendar.DECEMBER, 3, 23, 30)
         )
     )
 }
