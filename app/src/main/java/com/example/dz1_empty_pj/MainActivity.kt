@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
-import com.example.dz1_empty_pj.BirthdayReceiver.Companion.CONTACT_ID
 import com.example.dz1_empty_pj.databinding.ActivityMainBinding
 import com.example.dz1_empty_pj.fragment.ContactDetailsFragment
 import com.example.dz1_empty_pj.fragment.ContactListFragment
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), ContactInterface
             serverContact = binder.getService()
             contactBound = true
 
-            val fragment = intent.getStringExtra(BirthdayReceiver.FRAGMENT_LAYOUT)
+            val fragment = intent.getStringExtra(FRAGMENT_LAYOUT)
             val contactId = intent.getStringExtra(CONTACT_ID)
             Log.d(tag, "fragment = $fragment + contactId = $contactId")
 

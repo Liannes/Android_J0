@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.lifecycle.lifecycleScope
 import com.example.dz1_empty_pj.BirthdayReceiver
+import com.example.dz1_empty_pj.CONTACT_NAME
 import com.example.dz1_empty_pj.service.ContactInterface
 import com.example.dz1_empty_pj.R
 import com.example.dz1_empty_pj.data.Contact
@@ -48,8 +49,8 @@ class ContactDetailsFragment : Fragment(R.layout.contact_details_fragment) {
     private fun sentNotification() {
         Log.d(TAG, "ALARM ON")
         val intent = Intent(context, BirthdayReceiver::class.java)
-        intent.putExtra(BirthdayReceiver.CONTACT_ID, 0)
-        intent.putExtra(BirthdayReceiver.CONTACT_NAME, contactName)
+        intent.putExtra(CONTACT_ID, 0)
+        intent.putExtra(CONTACT_NAME, contactName)
         val alarmIntent = id?.let {
             PendingIntent.getBroadcast(
                 context,
