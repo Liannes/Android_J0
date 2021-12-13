@@ -32,7 +32,8 @@
                 android:src="@mipmap/ic_avatar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/listName"
@@ -52,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/smallHorizontalMargin"
-                android:layout_marginTop="@dimen/smallRangeVerticalMargin"
+                android:layout_marginTop="@dimen/superSmallHorizontalMargin"
                 android:layout_toEndOf="@+id/listImage"
                 android:text="@string/exampleTextMobile"
                 app:layout_constraintStart_toEndOf="@+id/listImage"

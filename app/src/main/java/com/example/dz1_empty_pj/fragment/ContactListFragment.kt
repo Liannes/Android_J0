@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
-import com.example.dz1_empty_pj.ContactInterface
+import com.example.dz1_empty_pj.service.ContactInterface
 import com.example.dz1_empty_pj.R
 import com.example.dz1_empty_pj.data.Contact
 import com.example.dz1_empty_pj.databinding.ContactListFragmentBinding

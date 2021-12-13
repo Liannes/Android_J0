@@ -25,7 +25,8 @@
             android:layout_height="@dimen/largeAvatarSize"
             android:src="@mipmap/ic_avatar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/textBirthDay" />
 
         <TextView
             android:id="@+id/detailsName"
@@ -93,7 +94,30 @@
             android:layout_marginTop="@dimen/defaultVerticalMargin"
             android:text="@string/textNote"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textEmailTwo" />
+            app:layout_constraintTop_toBottomOf="@id/textNotification" />
+
+
+        <TextView
+            android:id="@+id/textBirthDay"
+            style="@style/largeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/verySmallHorizontalMargin"
+            android:layout_marginTop="@dimen/verySmallHorizontalMargin"
+            android:text="@string/textBirthDay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textEmailTwo" />
+
+        <TextView
+            android:id="@+id/textNotification"
+            style="@style/largeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/verySmallHorizontalMargin"
+            android:layout_marginStart="@dimen/verySmallHorizontalMargin"
+            android:text="@string/textNotification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textBirthDay" />
 
         <TextView
             android:id="@+id/detailsNum"
@@ -140,15 +164,37 @@
             app:layout_constraintTop_toBottomOf="@+id/detailsEmail" />
 
         <TextView
+            android:id="@+id/detailsBirthday"
+            style="@style/largeTextItalic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/verySmallVerticalMargin"
+            android:layout_marginTop="@dimen/verySmallVerticalMargin"
+            android:text="@string/exampleTextBirthDay"
+            app:layout_constraintStart_toEndOf="@+id/textBirthDay"
+            app:layout_constraintTop_toBottomOf="@+id/detailsEmailTwo" />
+
+        <TextView
             android:id="@+id/detailsNote"
-            style="@style/largeText"
+            style="@style/largeTextItalic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/verySmallHorizontalMargin"
             android:layout_marginTop="@dimen/defaultVerticalMargin"
             android:text="@string/exampleTextNote"
-            app:layout_constraintStart_toEndOf="@+id/textNote"
-            app:layout_constraintTop_toBottomOf="@+id/detailsEmailTwo" />
+            app:layout_constraintStart_toEndOf="@id/textNote"
+            app:layout_constraintTop_toBottomOf="@id/switchButton" />
+
+        <Switch
+            android:id="@+id/switchButton"
+            style="@style/largeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/smallHorizontalMarginSwitch"
+            android:layout_marginTop="@dimen/smallVerticalMarginSwitch"
+            app:layout_constraintStart_toEndOf="@+id/textNotification"
+            app:layout_constraintTop_toBottomOf="@+id/detailsBirthday"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
