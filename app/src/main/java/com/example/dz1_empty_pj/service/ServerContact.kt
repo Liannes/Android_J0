@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Binder
 import android.os.IBinder
 import com.example.dz1_empty_pj.data.Contact
-import com.example.dz1_empty_pj.data.SetContact.setContact
+import com.example.dz1_empty_pj.`object`.SetContact.setContact
 import kotlinx.coroutines.delay
 
 class ServerContact : Service() {

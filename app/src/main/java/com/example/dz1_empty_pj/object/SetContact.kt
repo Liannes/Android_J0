@@ -1,6 +1,7 @@
-package com.example.dz1_empty_pj.data
+package com.example.dz1_empty_pj.`object`
 
 import com.example.dz1_empty_pj.R
+import com.example.dz1_empty_pj.data.Contact
 import java.util.*
 
 object SetContact {
@@ -14,7 +15,7 @@ object SetContact {
             secondEmail = "htfk@ya.es",
             description = "Много пьет, много знает",
             avatarUri = R.drawable.ic_git_cat,
-            birthDay = GregorianCalendar(2021, Calendar.DECEMBER, 3, 23, 30)
+            birthDay = GregorianCalendar(2021, Calendar.DECEMBER, 13)
         )
     )
 }
